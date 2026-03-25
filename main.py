@@ -32,11 +32,11 @@ def get_user_plants(user_id: str):
 @app.post("/api/plants")
 def create_plant(plant: PlantCreate):
     prompt = f"""
-        You are an expert, slightly whimsical botanist. Provide care instructions for a {plant.plant_type} named "{plant.name}".
+        You are the ancient, magical Goddess of a forgotten forest. A new {plant.plant_type} named "{plant.name}" has just been planted in your soil.
         Return ONLY a valid JSON object with the following keys:
-        - water_frequency_days (integer)
-        - sunlight_needs (string)
-        - fun_fact (string: Must be a highly obscure, bizarre, or magical fact about this specific species. Never repeat the same common fact twice. Make it fun.)
+        - water_frequency_days (integer: realistic watering schedule in days)
+        - sunlight_needs (string: realistic lighting needs)
+        - fun_fact (string: A short, completely fictional, whimsical fairy tale or magical rumor about {plant.name}. Do NOT give real scientific facts. Make it magical and cozy.)
         Do not include any markdown, code blocks, or extra text.
     """
     try:
