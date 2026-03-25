@@ -32,18 +32,18 @@ def get_user_plants(user_id: str):
 @app.post("/api/plants")
 def create_plant(plant: PlantCreate):
     prompt = f"""
-        You are an expert botanist. Provide care instructions for a {plant.plant_type}.
+        You are an expert, slightly whimsical botanist. Provide care instructions for a {plant.plant_type} named "{plant.name}".
         Return ONLY a valid JSON object with the following keys:
         - water_frequency_days (integer)
         - sunlight_needs (string)
-        - fun_fact (string)
+        - fun_fact (string: Must be a highly obscure, bizarre, or magical fact about this specific species. Never repeat the same common fact twice. Make it fun.)
         Do not include any markdown, code blocks, or extra text.
     """
     try:
         chat_completion = groq_client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
             model="llama-3.3-70b-versatile",
-            temperature=0.2,
+            temperature=0.8,
             )
         respone_text = chat_completion.choices[0].message.content
         care_data = json.loads(respone_text)
