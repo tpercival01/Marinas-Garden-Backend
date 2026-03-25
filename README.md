@@ -1,4 +1,4 @@
-# Marina's Digital Garden: API Service 🤖
+# Marina's Garden: API Service 🤖
 
 **Live API Endpoint:** [Play Marina's Garden](https://marinas-garden.vercel.app/)  
 **Frontend Client Repository:** [Link to frontend](https://github.com/tpercival01/Marinas-Garden-Frontend)
