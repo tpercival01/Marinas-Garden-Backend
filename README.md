@@ -1,6 +1,6 @@
 # Marina's Garden: API Service 🤖
 
-**Live API Endpoint:** [Play Marina's Garden](https://marinas-garden.vercel.app/)  
+**Live API Endpoint:** [Play Marina's Garden](https://garden.thomaspercival.dev/)  
 **Frontend Client Repository:** [Link to frontend](https://github.com/tpercival01/Marinas-Garden-Frontend)
 
 This is the API service for Marina's Digital Garden. It is a Python-based microservice built with FastAPI. It handles all database CRUD operations, secure authentication routing, and integrates directly with the Groq API to provide generative AI botany data.
